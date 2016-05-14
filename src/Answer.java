@@ -5,11 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Answer {
-	public static void main(String[] args) throws IOException {
-		BufferedReader in=null;
+
+	public void rightAnswer() throws IOException {
+		BufferedReader in = null;
 		List<String> ans = new ArrayList<String>();
 		try {
-			 in = new BufferedReader(new FileReader("D:\\answer.txt"));
+			in = new BufferedReader(new FileReader("D:\\answer.txt"));
 
 			String c;
 			while ((c = in.readLine()) != null) {
@@ -24,7 +25,6 @@ public class Answer {
 			}
 
 		}
-		
 
 	}
 

@@ -1,14 +1,25 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Student {
-	public void FileList(){
-	File d = new File("D:\\exam");
-	File[] fl = d.listFiles();
-	for (int i = 0; i < fl.length; i++) {
-			File e=fl[i];
-			if(e.isFile()){
-				System.out.println(e.getName());
-			}
+	BufferedReader in=null;
+	List<String> ansStu = new ArrayList<String>();
+	public void FileList() throws IOException {
+		File f = new File("D:\\exam");
+		File[] fList = f.listFiles();
+		for (File f1 : fList) {
+			in = new BufferedReader(new FileReader(f1));
+
+			String c;
+			while ((c = in.readLine()) != null) {
+				ansStu.add(c);
+		}
 		
-	}}
+	}
+
+}
 }
