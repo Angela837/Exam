@@ -5,26 +5,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Answer {
+	
+	
 
-	public void rightAnswer() throws IOException {
+	public List rightAnswer() throws IOException {
 		BufferedReader in = null;
-		List<String> ans = new ArrayList<String>();
-		try {
-			in = new BufferedReader(new FileReader("D:\\answer.txt"));
+		List ans = new ArrayList();
+		in = new BufferedReader(new FileReader("D:\\´ð°¸.txt"));
 
 			String c;
 			while ((c = in.readLine()) != null) {
-				ans.add(c);
+				for (int j = 0; j < c.length(); j++) {
+					ans.add(c.charAt(j)); 
+				}
 
 			}
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		} finally {
-			if (in != null) {
-				in.close();
-			}
-
-		}
+			
+		
+		return ans;
 
 	}
 
